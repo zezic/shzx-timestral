@@ -153,7 +153,6 @@ impl<'a> ForecastRequest<'a> {
     pub fn horizon(&self) -> usize {
         self.horizon
     }
-    #[must_use]
     pub fn target_names(&self) -> impl ExactSizeIterator<Item = &str> {
         self.targets.iter().map(|target| target.name.as_str())
     }

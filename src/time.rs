@@ -56,7 +56,6 @@ impl TimeGrid {
     pub fn timestamp(self, index: usize) -> Option<i64> {
         (index < self.len()).then(|| self.timestamp_at(index).expect("validated grid"))
     }
-    #[must_use]
     pub fn timestamps(self) -> impl ExactSizeIterator<Item = i64> {
         (0..self.len()).map(move |i| self.timestamp(i).expect("index in grid"))
     }

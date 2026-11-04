@@ -167,7 +167,6 @@ impl Forecast {
             .position(|target| target == name)
             .map(|index| self.at(index))
     }
-    #[must_use]
     pub fn targets(&self) -> impl ExactSizeIterator<Item = TargetForecast<'_>> {
         (0..self.targets.len()).map(|index| self.at(index))
     }
@@ -206,7 +205,6 @@ impl<'a> TargetForecast<'a> {
             .get(index)
             .map(|step| step.as_slice())
     }
-    #[must_use]
     pub fn quantile(self, quantile: Quantile) -> impl ExactSizeIterator<Item = f32> + 'a {
         let index = quantile.index();
         self.values
@@ -215,7 +213,6 @@ impl<'a> TargetForecast<'a> {
             .iter()
             .map(move |step| step[index])
     }
-    #[must_use]
     pub fn median(self) -> impl ExactSizeIterator<Item = f32> + 'a {
         self.quantile(Quantile::P50)
     }
