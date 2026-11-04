@@ -1,0 +1,12 @@
+shzx-timestral uses candle-timestral and Candle as external dependencies.
+
+The categorical preprocessing follows the Apache-2.0 reference implementation
+by Mistral AI: https://github.com/mistralai/timestral
+
+The reference test fixtures and adapted parity cases are from the Apache-2.0
+nfnt/datafusion-forecast project. See tests/fixtures/README.md and its retained
+LICENSE-APACHE-2.0 for provenance and attribution.
+
+Model weights are not included in this crate. Their separate Modified MIT
+license is downloaded alongside the checkpoints and is not replaced by this
+code license.

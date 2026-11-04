@@ -1,0 +1,871 @@
+{
+  "measured_on": "2026-11-04",
+  "hardware": "Apple M4, 24 GiB RAM",
+  "rust": "1.98.1",
+  "features": [
+    "hub",
+    "metal",
+    "accelerate"
+  ],
+  "profile": "release",
+  "settings": {
+    "symmetry": "Average",
+    "nonnegative": "Clip"
+  },
+  "measurements": [
+    {
+      "model": "28M",
+      "backend": "Cpu",
+      "scenario": "uni",
+      "context": 4096,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 13.296084,
+      "warmup_ms": 50.4625,
+      "p50_ms": 46.961333,
+      "run_ms": [
+        46.150375000000004,
+        46.266542,
+        46.819917000000004,
+        46.961333,
+        47.308584,
+        47.562124999999995,
+        47.953208
+      ]
+    },
+    {
+      "model": "28M",
+      "backend": "Cpu",
+      "scenario": "market",
+      "context": 512,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 13.271417000000001,
+      "warmup_ms": 97.824125,
+      "p50_ms": 60.823207999999994,
+      "run_ms": [
+        55.502,
+        55.539249999999996,
+        56.397375,
+        60.823207999999994,
+        64.114292,
+        65.95700000000001,
+        85.8475
+      ]
+    },
+    {
+      "model": "28M",
+      "backend": "Cpu",
+      "scenario": "multi",
+      "context": 512,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 13.534125,
+      "warmup_ms": 60.282584,
+      "p50_ms": 54.475583,
+      "run_ms": [
+        53.360499999999995,
+        53.751042,
+        54.009750000000004,
+        54.475583,
+        54.754125,
+        54.838917,
+        62.565791999999995
+      ]
+    },
+    {
+      "model": "28M",
+      "backend": "Cpu",
+      "scenario": "uni",
+      "context": 512,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 160.575875,
+      "warmup_ms": 19.098958,
+      "p50_ms": 12.028959,
+      "run_ms": [
+        11.900333000000002,
+        11.971582999999999,
+        12.002583000000001,
+        12.028959,
+        12.111666,
+        12.119207999999999,
+        12.678167
+      ]
+    },
+    {
+      "model": "28M",
+      "backend": "Metal { ordinal: 0 }",
+      "scenario": "uni",
+      "context": 4096,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 23.443333,
+      "warmup_ms": 138.098333,
+      "p50_ms": 28.791792,
+      "run_ms": [
+        28.508125,
+        28.609375,
+        28.636667000000003,
+        28.791792,
+        28.885458,
+        28.93,
+        29.0165
+      ]
+    },
+    {
+      "model": "28M",
+      "backend": "Metal { ordinal: 0 }",
+      "scenario": "market",
+      "context": 512,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 19.876125000000002,
+      "warmup_ms": 52.455124999999995,
+      "p50_ms": 44.042875,
+      "run_ms": [
+        43.282458000000005,
+        43.414167,
+        43.88325,
+        44.042875,
+        44.103167,
+        44.117208,
+        44.243834
+      ]
+    },
+    {
+      "model": "28M",
+      "backend": "Metal { ordinal: 0 }",
+      "scenario": "multi",
+      "context": 512,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 20.580958,
+      "warmup_ms": 52.458,
+      "p50_ms": 43.849125,
+      "run_ms": [
+        43.54425,
+        43.829750000000004,
+        43.837374999999994,
+        43.849125,
+        43.874625,
+        43.888999999999996,
+        43.932875
+      ]
+    },
+    {
+      "model": "28M",
+      "backend": "Metal { ordinal: 0 }",
+      "scenario": "uni",
+      "context": 512,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 20.770332999999997,
+      "warmup_ms": 24.238916,
+      "p50_ms": 11.446792,
+      "run_ms": [
+        11.231,
+        11.407375,
+        11.419291,
+        11.446792,
+        11.448625,
+        11.54,
+        11.566958
+      ]
+    },
+    {
+      "model": "5M",
+      "backend": "Cpu",
+      "scenario": "market",
+      "context": 512,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 2.496541,
+      "warmup_ms": 20.301833,
+      "p50_ms": 19.775375,
+      "run_ms": [
+        19.425583,
+        19.691791,
+        19.699749999999998,
+        19.775375,
+        19.8675,
+        20.018250000000002,
+        20.15825
+      ]
+    },
+    {
+      "model": "5M",
+      "backend": "Cpu",
+      "scenario": "multi",
+      "context": 512,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 2.517666,
+      "warmup_ms": 22.010749999999998,
+      "p50_ms": 19.948541,
+      "run_ms": [
+        19.751292,
+        19.82225,
+        19.901374999999998,
+        19.948541,
+        20.290084,
+        20.897875,
+        21.018458
+      ]
+    },
+    {
+      "model": "5M",
+      "backend": "Cpu",
+      "scenario": "uni",
+      "context": 512,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 31.5275,
+      "warmup_ms": 6.1025,
+      "p50_ms": 4.354833,
+      "run_ms": [
+        4.018084,
+        4.2333750000000006,
+        4.346667,
+        4.354833,
+        4.428209,
+        4.484292,
+        4.513166
+      ]
+    },
+    {
+      "model": "5M",
+      "backend": "Metal { ordinal: 0 }",
+      "scenario": "market",
+      "context": 512,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 10.055667000000001,
+      "warmup_ms": 211.86775,
+      "p50_ms": 15.391,
+      "run_ms": [
+        15.343209,
+        15.365916,
+        15.389999999999999,
+        15.391,
+        15.421583,
+        15.672624999999998,
+        15.919625
+      ]
+    },
+    {
+      "model": "5M",
+      "backend": "Metal { ordinal: 0 }",
+      "scenario": "multi",
+      "context": 512,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 9.109124999999999,
+      "warmup_ms": 23.817208,
+      "p50_ms": 16.109208,
+      "run_ms": [
+        15.481583,
+        15.884792,
+        16.015916,
+        16.109208,
+        16.2365,
+        16.274,
+        16.434957999999998
+      ]
+    },
+    {
+      "model": "5M",
+      "backend": "Metal { ordinal: 0 }",
+      "scenario": "uni",
+      "context": 512,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 9.365,
+      "warmup_ms": 7690.001916,
+      "p50_ms": 5.053875000000001,
+      "run_ms": [
+        4.912916,
+        5.035125,
+        5.040541,
+        5.053875000000001,
+        5.057291,
+        5.334375,
+        6.692792000000001
+      ]
+    },
+    {
+      "model": "123M",
+      "backend": "Cpu",
+      "scenario": "uni",
+      "context": 4096,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 57.438333,
+      "warmup_ms": 153.069167,
+      "p50_ms": 155.381042,
+      "run_ms": [
+        141.45920900000002,
+        142.69104199999998,
+        151.491375,
+        155.381042,
+        184.38945800000002,
+        201.638625,
+        252.56058399999998
+      ],
+      "maximum_resident_set_size_bytes": 991477760,
+      "peak_memory_footprint_bytes": 524108856
+    },
+    {
+      "model": "123M",
+      "backend": "Cpu",
+      "scenario": "market",
+      "context": 512,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 57.695542,
+      "warmup_ms": 207.263125,
+      "p50_ms": 173.67691599999998,
+      "run_ms": [
+        168.108042,
+        171.56525,
+        172.14770900000002,
+        173.67691599999998,
+        178.16554200000002,
+        181.010583,
+        210.620167
+      ],
+      "maximum_resident_set_size_bytes": 990445568,
+      "peak_memory_footprint_bytes": 518063160
+    },
+    {
+      "model": "123M",
+      "backend": "Cpu",
+      "scenario": "uni",
+      "context": 32768,
+      "horizon": 32,
+      "repeats": 1,
+      "load_ms": 70.462958,
+      "warmup_ms": 1266.747417,
+      "p50_ms": 1160.828667,
+      "run_ms": [
+        1160.828667
+      ],
+      "maximum_resident_set_size_bytes": 990445568,
+      "peak_memory_footprint_bytes": 632161432
+    },
+    {
+      "model": "123M",
+      "backend": "Cpu",
+      "scenario": "multi",
+      "context": 512,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 58.570916000000004,
+      "warmup_ms": 179.532667,
+      "p50_ms": 170.555583,
+      "run_ms": [
+        167.04512499999998,
+        167.534,
+        168.909459,
+        170.555583,
+        172.513875,
+        185.9295,
+        209.933875
+      ],
+      "maximum_resident_set_size_bytes": 992706560,
+      "peak_memory_footprint_bytes": 517850168
+    },
+    {
+      "model": "123M",
+      "backend": "Cpu",
+      "scenario": "uni",
+      "context": 512,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 653.5000829999999,
+      "warmup_ms": 55.570959,
+      "p50_ms": 43.722583,
+      "run_ms": [
+        42.465583,
+        42.730292000000006,
+        42.8885,
+        43.722583,
+        48.103417,
+        50.676,
+        74.58
+      ],
+      "maximum_resident_set_size_bytes": 990478336,
+      "peak_memory_footprint_bytes": 516064312
+    },
+    {
+      "model": "123M",
+      "backend": "Metal { ordinal: 0 }",
+      "scenario": "uni",
+      "context": 4096,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 69.423917,
+      "warmup_ms": 187.336833,
+      "p50_ms": 87.308292,
+      "run_ms": [
+        86.091666,
+        86.768625,
+        87.06245799999999,
+        87.308292,
+        89.12766699999999,
+        89.630791,
+        99.96833400000001
+      ],
+      "maximum_resident_set_size_bytes": 994852864,
+      "peak_memory_footprint_bytes": 585450480
+    },
+    {
+      "model": "123M",
+      "backend": "Metal { ordinal: 0 }",
+      "scenario": "market",
+      "context": 512,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 85.393167,
+      "warmup_ms": 148.42266600000002,
+      "p50_ms": 124.637709,
+      "run_ms": [
+        124.15950000000001,
+        124.381334,
+        124.401417,
+        124.637709,
+        125.222584,
+        125.69266700000001,
+        127.68858399999999
+      ],
+      "maximum_resident_set_size_bytes": 994820096,
+      "peak_memory_footprint_bytes": 586892272
+    },
+    {
+      "model": "123M",
+      "backend": "Metal { ordinal: 0 }",
+      "scenario": "uni",
+      "context": 32768,
+      "horizon": 32,
+      "repeats": 1,
+      "load_ms": 84.431792,
+      "warmup_ms": 1836.623583,
+      "p50_ms": 1010.130083,
+      "run_ms": [
+        1010.130083
+      ],
+      "maximum_resident_set_size_bytes": 994836480,
+      "peak_memory_footprint_bytes": 714785752
+    },
+    {
+      "model": "123M",
+      "backend": "Metal { ordinal: 0 }",
+      "scenario": "multi",
+      "context": 512,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 70.680458,
+      "warmup_ms": 151.270125,
+      "p50_ms": 124.96629200000001,
+      "run_ms": [
+        124.68620800000001,
+        124.735125,
+        124.925125,
+        124.96629200000001,
+        125.860625,
+        127.515833,
+        127.69429199999999
+      ],
+      "maximum_resident_set_size_bytes": 995033088,
+      "peak_memory_footprint_bytes": 584582128
+    },
+    {
+      "model": "123M",
+      "backend": "Metal { ordinal: 0 }",
+      "scenario": "uni",
+      "context": 512,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 74.159458,
+      "warmup_ms": 60.491625,
+      "p50_ms": 28.368667,
+      "run_ms": [
+        27.991625,
+        28.111875,
+        28.318666999999998,
+        28.368667,
+        31.452042,
+        31.549208000000004,
+        32.174417
+      ],
+      "maximum_resident_set_size_bytes": 994885632,
+      "peak_memory_footprint_bytes": 566707184
+    },
+    {
+      "model": "209M",
+      "backend": "Cpu",
+      "scenario": "uni",
+      "context": 4096,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 100.200541,
+      "warmup_ms": 276.97741599999995,
+      "p50_ms": 226.40691700000002,
+      "run_ms": [
+        219.21966700000002,
+        219.79612500000002,
+        220.448083,
+        226.40691700000002,
+        235.463125,
+        244.004333,
+        292.38075000000003
+      ],
+      "maximum_resident_set_size_bytes": 1686552576,
+      "peak_memory_footprint_bytes": 872023264
+    },
+    {
+      "model": "209M",
+      "backend": "Cpu",
+      "scenario": "market",
+      "context": 512,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 99.499167,
+      "warmup_ms": 282.38216700000004,
+      "p50_ms": 257.518208,
+      "run_ms": [
+        250.36124999999998,
+        252.214041,
+        256.302167,
+        257.518208,
+        269.750125,
+        273.909041,
+        308.040042
+      ],
+      "maximum_resident_set_size_bytes": 1686519808,
+      "peak_memory_footprint_bytes": 864716048
+    },
+    {
+      "model": "209M",
+      "backend": "Cpu",
+      "scenario": "uni",
+      "context": 32768,
+      "horizon": 32,
+      "repeats": 1,
+      "load_ms": 97.866083,
+      "warmup_ms": 1782.1962500000002,
+      "p50_ms": 1759.9080840000001,
+      "run_ms": [
+        1759.9080840000001
+      ],
+      "maximum_resident_set_size_bytes": 1685225472,
+      "peak_memory_footprint_bytes": 994821464
+    },
+    {
+      "model": "209M",
+      "backend": "Cpu",
+      "scenario": "multi",
+      "context": 512,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 98.627541,
+      "warmup_ms": 282.60612499999996,
+      "p50_ms": 266.242667,
+      "run_ms": [
+        251.78125,
+        253.40404100000003,
+        255.301,
+        266.242667,
+        290.070583,
+        294.17395899999997,
+        327.0615
+      ],
+      "maximum_resident_set_size_bytes": 1685028864,
+      "peak_memory_footprint_bytes": 867403000
+    },
+    {
+      "model": "209M",
+      "backend": "Cpu",
+      "scenario": "uni",
+      "context": 512,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 1478.90375,
+      "warmup_ms": 113.269541,
+      "p50_ms": 65.656042,
+      "run_ms": [
+        65.000416,
+        65.181292,
+        65.256375,
+        65.656042,
+        66.700084,
+        106.104709,
+        112.14675
+      ],
+      "maximum_resident_set_size_bytes": 1684865024,
+      "peak_memory_footprint_bytes": 861177032
+    },
+    {
+      "model": "209M",
+      "backend": "Metal { ordinal: 0 }",
+      "scenario": "uni",
+      "context": 4096,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 111.433458,
+      "warmup_ms": 145.963375,
+      "p50_ms": 128.687459,
+      "run_ms": [
+        128.230916,
+        128.602125,
+        128.679625,
+        128.687459,
+        128.93375,
+        128.948417,
+        130.04333300000002
+      ],
+      "maximum_resident_set_size_bytes": 1688567808,
+      "peak_memory_footprint_bytes": 932250824
+    },
+    {
+      "model": "209M",
+      "backend": "Metal { ordinal: 0 }",
+      "scenario": "market",
+      "context": 512,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 114.60387499999999,
+      "warmup_ms": 205.904333,
+      "p50_ms": 197.402125,
+      "run_ms": [
+        189.342708,
+        192.095875,
+        194.056958,
+        197.402125,
+        197.49575,
+        214.91291700000002,
+        225.881958
+      ],
+      "maximum_resident_set_size_bytes": 1688403968,
+      "peak_memory_footprint_bytes": 937821360
+    },
+    {
+      "model": "209M",
+      "backend": "Metal { ordinal: 0 }",
+      "scenario": "uni",
+      "context": 32768,
+      "horizon": 32,
+      "repeats": 1,
+      "load_ms": 120.828208,
+      "warmup_ms": 1412.3445829999998,
+      "p50_ms": 1405.299916,
+      "run_ms": [
+        1405.299916
+      ],
+      "maximum_resident_set_size_bytes": 1688600576,
+      "peak_memory_footprint_bytes": 1076544712
+    },
+    {
+      "model": "209M",
+      "backend": "Metal { ordinal: 0 }",
+      "scenario": "multi",
+      "context": 512,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 116.49641700000001,
+      "warmup_ms": 203.815709,
+      "p50_ms": 191.15025,
+      "run_ms": [
+        189.288541,
+        190.417791,
+        190.862125,
+        191.15025,
+        191.174958,
+        195.032667,
+        196.021333
+      ],
+      "maximum_resident_set_size_bytes": 1688436736,
+      "peak_memory_footprint_bytes": 937886944
+    },
+    {
+      "model": "209M",
+      "backend": "Metal { ordinal: 0 }",
+      "scenario": "uni",
+      "context": 512,
+      "horizon": 96,
+      "repeats": 7,
+      "load_ms": 114.958958,
+      "warmup_ms": 53.420875,
+      "p50_ms": 41.056209,
+      "run_ms": [
+        40.9355,
+        40.983667000000004,
+        41.017375,
+        41.056209,
+        41.070750000000004,
+        41.115083,
+        44.718
+      ],
+      "maximum_resident_set_size_bytes": 1688698880,
+      "peak_memory_footprint_bytes": 915178720
+    }
+  ],
+  "model_revisions": {
+    "5M": "bdd20cfc15a3fea0e4cb5ccef37f8d3ca7aa335f",
+    "28M": "49b26409ac87b5935539a5d8ffe7f397b720db47",
+    "123M": "5a147287addda85f6acd8da3fb8858fe9af7e8f7",
+    "209M": "9874d252ab0aae16f7f7c999f98f98d6ad7d8365"
+  },
+  "reference_parity": [
+    {
+      "model": "5M",
+      "backend": "cpu",
+      "features": "accelerate",
+      "comparisons": 27,
+      "max_case_normalized_error": 0.00003302,
+      "tolerance": 0.0001
+    },
+    {
+      "model": "28M",
+      "backend": "cpu",
+      "features": "accelerate",
+      "comparisons": 27,
+      "max_case_normalized_error": 0.00002196,
+      "tolerance": 0.0001
+    },
+    {
+      "model": "123M",
+      "backend": "cpu",
+      "features": "accelerate",
+      "comparisons": 27,
+      "max_case_normalized_error": 0.000008872,
+      "tolerance": 0.0001
+    },
+    {
+      "model": "209M",
+      "backend": "cpu",
+      "features": "accelerate",
+      "comparisons": 27,
+      "max_case_normalized_error": 0.00001171,
+      "tolerance": 0.0001
+    },
+    {
+      "model": "5M",
+      "backend": "cpu",
+      "features": "portable",
+      "comparisons": 27,
+      "max_case_normalized_error": 0.00002485,
+      "tolerance": 0.0001
+    },
+    {
+      "model": "28M",
+      "backend": "cpu",
+      "features": "portable",
+      "comparisons": 27,
+      "max_case_normalized_error": 0.00001621,
+      "tolerance": 0.0001
+    },
+    {
+      "model": "123M",
+      "backend": "cpu",
+      "features": "portable",
+      "comparisons": 27,
+      "max_case_normalized_error": 0.000009262,
+      "tolerance": 0.0001
+    },
+    {
+      "model": "209M",
+      "backend": "cpu",
+      "features": "portable",
+      "comparisons": 27,
+      "max_case_normalized_error": 0.000009607,
+      "tolerance": 0.0001
+    },
+    {
+      "model": "5M",
+      "backend": "metal",
+      "features": "metal,accelerate",
+      "comparisons": 27,
+      "max_case_normalized_error": 0.00003002,
+      "tolerance": 0.0001
+    },
+    {
+      "model": "28M",
+      "backend": "metal",
+      "features": "metal,accelerate",
+      "comparisons": 27,
+      "max_case_normalized_error": 0.000005332,
+      "tolerance": 0.0001
+    },
+    {
+      "model": "123M",
+      "backend": "metal",
+      "features": "metal,accelerate",
+      "comparisons": 27,
+      "max_case_normalized_error": 0.00001162,
+      "tolerance": 0.0001
+    },
+    {
+      "model": "209M",
+      "backend": "metal",
+      "features": "metal,accelerate",
+      "comparisons": 27,
+      "max_case_normalized_error": 0.000004971,
+      "tolerance": 0.0001
+    }
+  ],
+  "market_snapshots": [
+    {
+      "model": "123M",
+      "backend": "cpu",
+      "closed_candles": 203,
+      "context_steps": 203,
+      "horizon": 32,
+      "load_ms": 60.343,
+      "forecast_ms": 128.705458,
+      "origin_ms": 1793739000000,
+      "first_median": 111.7240219116211,
+      "last_median": 111.73220825195312,
+      "artifact": "captures/market-forecast-123M-cpu.json"
+    },
+    {
+      "model": "123M",
+      "backend": "metal",
+      "closed_candles": 203,
+      "context_steps": 203,
+      "horizon": 32,
+      "load_ms": 71.12241599999999,
+      "forecast_ms": 146.325292,
+      "origin_ms": 1793739000000,
+      "first_median": 111.7240219116211,
+      "last_median": 111.73220825195312,
+      "artifact": "captures/market-forecast-123M-metal.json"
+    },
+    {
+      "model": "209M",
+      "backend": "cpu",
+      "closed_candles": 203,
+      "context_steps": 203,
+      "horizon": 32,
+      "load_ms": 105.383584,
+      "forecast_ms": 206.666167,
+      "origin_ms": 1793739000000,
+      "first_median": 111.71809387207031,
+      "last_median": 111.72450256347656,
+      "artifact": "captures/market-forecast-209M-cpu.json"
+    },
+    {
+      "model": "209M",
+      "backend": "metal",
+      "closed_candles": 203,
+      "context_steps": 203,
+      "horizon": 32,
+      "load_ms": 109.796875,
+      "forecast_ms": 102.887625,
+      "origin_ms": 1793739000000,
+      "first_median": 111.71809387207031,
+      "last_median": 111.72450256347656,
+      "artifact": "captures/market-forecast-209M-metal.json"
+    }
+  ]
+}

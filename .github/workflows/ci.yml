@@ -1,0 +1,40 @@
+name: Rust
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: read
+
+jobs:
+  cpu:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - run: cargo fmt --all -- --check
+      - run: cargo test --locked --all-targets
+      - run: cargo test --locked --doc
+      - run: cargo clippy --locked --all-targets --features hub -- -D warnings
+      - if: runner.os == 'macOS'
+        run: cargo check --locked --all-targets --features hub,metal,accelerate
+
+  reference-5m:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Download pinned checkpoint
+        shell: bash
+        run: |
+          mkdir -p models/Timestral-5M
+          for file in config.json model.safetensors LICENSE; do
+            curl --fail --location --retry 3 "https://huggingface.co/mistralai/Timestral-5M/resolve/bdd20cfc15a3fea0e4cb5ccef37f8d3ca7aa335f/$file" --output "models/Timestral-5M/$file"
+          done
+      - run: cargo test --release --locked --test parity 5m -- --ignored --test-threads=1
+        env:
+          TIMESTRAL_5M_DIR: models/Timestral-5M

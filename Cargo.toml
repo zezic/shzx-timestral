@@ -1,0 +1,32 @@
+[package]
+name = "shzx-timestral"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.95"
+description = "Native Timestral forecasting for aligned market time series"
+repository = "https://github.com/zezic/shzx-timerstal"
+license = "Apache-2.0"
+exclude = ["models/**", "captures/**", ".DS_Store"]
+
+[features]
+default = []
+hub = ["dep:hf-hub"]
+metal = ["candle-timestral/metal", "candle-core/metal", "dep:candle-metal-kernels"]
+accelerate = ["candle-timestral/accelerate", "candle-core/accelerate"]
+cuda = ["candle-timestral/cuda", "candle-core/cuda"]
+
+[dependencies]
+candle-core = "0.11"
+candle-metal-kernels = { version = "0.11", optional = true }
+candle-timestral = "=0.1.0"
+hf-hub = { version = "1", features = ["blocking"], optional = true }
+thiserror = "2"
+
+[dev-dependencies]
+chrono = { version = "0.4", default-features = false, features = ["std"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[[example]]
+name = "forecast"
+required-features = ["hub"]
